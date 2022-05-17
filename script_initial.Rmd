@@ -19,7 +19,7 @@ p:21/dh/es_dh/r/tut
 - rep in gh desktop als locales rep dazugefügt.
 .9 in gh desk open rep in vs
 .10 change something e.g. this text
-.11 save > voila: aufforderung zum commit als lapsi.
+.11 save > voila: aufforderung zum commit on lapsi.
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

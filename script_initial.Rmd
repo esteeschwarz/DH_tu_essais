@@ -13,7 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 12204.5
 p:21/dh/es_dh/r/tut
 .6 op gh vs, sv: no cm, no ch in ghdsk
-.7 12203 no cm
+.7 12203 no cm:
+.8 vorgehen:
+- repository in R als neues project erstellt
+- rep in gh desktop als locales rep dazugefügt.
+.9 in gh desk open rep in vs
+.10 change something e.g. this text
+.11 save > voila: aufforderung zum commit als lapsi.
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

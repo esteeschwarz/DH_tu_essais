@@ -5,21 +5,21 @@
 
 # neue Art Pakete zu installieren:
 if (!require("purrr")) install.packages("purrr") 
-install.packages(c("xml2", "stringr"))
+if (!require("xml2","stringr")) install.packages(c("xml2", "stringr"))
 library(xml2)
 library(purrr)
 library(stringr)
 
-setwd("")
+#setwd("")
 
 
 ## Einstieg: Struktur, Elemente, xpath-Pfade
 
-data <- read_xml("ELTeC-de_level1_DEU004.xml")
+data <- read_xml("data/ELTeC-de_level1_DEU004.xml")
 typeof(data)
 data
 # Mehrere Dateien einlesen: brauchen wir jetzt nicht
-files <- list.files(pattern = "\\.xml") # alternativ: path = "" als weiteres Argument der list.files Funktion
+files <- list.files(pattern = "\\.xml",path = "data",include.dirs = T,full.names = T) # alternativ: path = "" als weiteres Argument der list.files Funktion
 xml_corpus <- map(files, read_xml)
 typeof(xml_corpus)
 # Oder: Funktion lapply
@@ -28,8 +28,9 @@ lst <- list("")
 for(i in 1:length(files)){
    lst[[i]]<- read_xml(files[i])
 }
-lst
 
+lst==xml_corpus
+xml_corpus
 # Namen bestimmter Elemente anzeigen 
 ?xml_name
 xml_name(data)
@@ -58,6 +59,8 @@ all_heads <- data %>%
 all_heads
 all_heads[1]
 
+
+  
 # Beispiel 2: Alle Kapitelüberschriften extrahieren
 # So geht es nicht
 xml_text(all_heads[2])
@@ -74,7 +77,7 @@ xml_text(ch_1_head)
 
 ## Beispiel 3: Part of Speech tags extrahieren
 
-pos_data <- read_xml("ELTeC-de_level2_DEU004.xml")
+pos_data <- read_xml("data/ELTeC-de_level2_DEU004.xml")
 
 pos_data %>% xml_ns()
 pos_data %>% xml_ns_strip()

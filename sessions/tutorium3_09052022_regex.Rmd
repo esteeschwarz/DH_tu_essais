@@ -21,7 +21,7 @@ Reguläre Ausdrücke = Regular Expression, kurz: RegEx, RegExp <br />
 Formale Definition: Eine Beschreibungsmöglichkeit von formalen Sprachen (Programmiersprachen), bei der reguläre Ausdrücke Platzhalter für Teile dieser Sprache sind. Einfach formuliert: Reguläre Ausdrücke sind ein verallgemeinertes Suchmuster (pattern) für Zeichenketten.
 
 * Regex gibt es in fast jeder Sprache
-* Sie werden für Operationen auf Strings eingesetzt, zum Suchen oder Bearbeiten einer Zeichenkette
+* Sie werden für Operationen auf Strings eingesetzt, zum suchen oder bearbeiten einer Zeichenkette
 * Sie kommen z.B. beim Preprocessing, aber auch zum Debuggen von Code oder in Webscrapern zur Anwendung.
 
 ## 2. Reguläre Ausdrücke in R
@@ -58,8 +58,10 @@ Wir verwenden zunächst die readtext() Funktion zum Einlesen unseres Märchens.
 
 ```{r }
 
-rapunzel_df <- readtext("Rapunzel_(1850).txt") #df ist Standard-Abkürzung für dataframe
+rapunzel_df <- readtext("data/maerchen/Rapunzel_(1850).txt") #df ist Standard-Abkürzung für dataframe
 str(rapunzel_df) #str() gibt einen die Struktur eines R Datenobjekts übersichtlich aus
+typeof(rapunzel_df)
+
 
 ```
 
@@ -67,7 +69,7 @@ Durch Einlesen des Märchens mithilfe der readtext() Funktion haben wir also ein
 
 
 ```{r}
-grep("Rapunzel", rapunzel_df$text, value=F) 
+grep("Rapunzel", rapunzel_df$text, value=F) #mit T gibt den text von rapunzel zurück 
 grepl("Rapunzel", rapunzel_df$text)
 regexpr("Rapunzel", rapunzel_df$text)
 gregexpr("Rapunzel", rapunzel_df$text)
@@ -86,13 +88,15 @@ Die Ausgabe war nicht besonders aussagekräftig. Es gibt zwei Lösungen: Wir kö
 Befehl readLines
 
 ```{r }
-rapunzel <- readLines("Rapunzel_(1850).txt")
+rapunzel <- readLines("data/maerchen/Rapunzel_(1850).txt")
 str(rapunzel)
+typeof(rapunzel)
+head(rapunzel)
 ```
 
 Verständnisfrage: 
 
-* Welche Struktur hat unser Datenobjekt "rapunzel" nach Einlesen des Märchens mithilfe der readLines Funktion? 
+* Welchen Datentyp hat unser Datenobjekt "rapunzel" nach Einlesen des Märchens mithilfe der readLines Funktion? 
 
 
 ```{r attr.output='style="max-height: 100px;"'}
@@ -102,12 +106,6 @@ regexpr("Rapunzel", rapunzel)
 gregexpr("Rapunzel", rapunzel)
 ```
 
-Die Funktionen ``regexpr()`` und ``gregexpr()`` können um die Funktion ``regmatches`` ergänzt werden, um statt Funstellen die tatsächlich gefundenen Zeichenketten anzuzeigen: 
-
-```{r attr.output='style="max-height: 100px;"'}
-regmatches(rapunzel, regexpr("Rapunzel", rapunzel))
-regmatches(rapunzel, gregexpr("Rapunzel", rapunzel))
-```
 
 Wir können auch einzelne Absätze durchsuchen oder die Gesamtanzahl der Fundstellen ausgeben lassen:  
 
@@ -145,7 +143,7 @@ Vergleich r base und stringr: https://stringr.tidyverse.org/articles/from-base.h
 
 Verständnisfragen: 
 
-* Welche stringr Funktionen können anstelle der bereits kennengelernten R base Funktionen verwendet werden? 
+* Welche stringr Funktionen können anstelle der bereits kennengelernten R base Funktionen verwendet weredn? 
 * Googelt das Paket stringi. Was ist der Unterschied zu stringr?
 
 &rarr; **Übung: tutorium3_09052022_uebung.R** 
@@ -168,8 +166,8 @@ Wichtige Zeichen:
   | ``⎮``            |  Veroderung (ohne Leerzeichen!)        |                   |
   |                  |  Achtung: Auf Eindeutigkeit achten!    |                   |
   |                  |  Klammern nutzen!                      |                   |
-  | ``()``           |  Gruppen: Einheiten können mit runden  | Baum(krone⎮stamm) |           
-  |                  |  Klammern begrenzt werden              | 199(4⎮5)          |
+  | ``()``           |  Gruppen: Einheiten können mit runden  | Baum(krone|stamm) |           
+  |                  |  Klammern begrenzt werden              | 199(4|5)          |
   | ``[]``           |  Zeichenklasse                         | [a-zA-ZäöüÄÖÜß]   |
   |                  |  - Bindestrich für Zahlen- oder        | [0-9]             |
   |                  |    Buchstabenreihen                    |                   |
@@ -203,7 +201,7 @@ Verständnisfragen:
 
 ### 3.2 Zeichenklassen
 
-Nach manchen Zeichen wird so oft gesucht, dass sich bereits nützliche Abkürzungen dafür entwickelt haben. Diese Zeichenklassen können zum Beispiel mit Funktionen aus dem Paket stringr verwendet werden.
+Nach manchen Zeichen wird so oft gesucht, dass sich bereits nützliche Abkürzungen dafür entwickelt haben. 
 
   | Klasse           |  Bedeutung                                   |
   |------------------|----------------------------------------------|

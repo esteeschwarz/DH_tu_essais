@@ -7,3 +7,4 @@
 .6: mn bx snc, 1 chg mn, commit mn.
 .7: op 001 in R, create .gitignore, com mn. chk: only local commit.
 .8: com 02, häkchen setzen..., häkchen, commit, push. chk brw. wks.
+---

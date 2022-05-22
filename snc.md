@@ -14,3 +14,4 @@
 .4: rm gt* fr bx sncexc, bth
 .4: rm bx gt from lp, cl into loc, com mn, wks.
 .5: ed r, chk vs, com vs
+.6: cl to bxfoldr wt gt*snc rem

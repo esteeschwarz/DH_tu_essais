@@ -16,4 +16,5 @@
 .5: ed r, chk vs, com vs
 .6: cl to bxfoldr wt gt*snc rem
 .7: no inst snc .git
-.8: cm min, chk lp bx. pops lp/min com dem
+.8: cm min, chk lp bx. pops lp/min com dem. wks wt bx conf?
+.9: ad loc bx rep to gtdsk

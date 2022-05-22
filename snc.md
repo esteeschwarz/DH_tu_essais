@@ -11,4 +11,5 @@
 .1: tu_es arrives lp, try com lp vs. wks.
 .2: dh_es not arrived, maybe dh_tu+dh_es in 1 vs ws opened...
 .3: slv reb. wks.
-.4: rm bx gt from lp, cl into loc
+.4: rm bx gt from lp, cl into loc, com mn, wks.
+.5: ed r, chk vs, com vs

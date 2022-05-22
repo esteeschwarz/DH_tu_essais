@@ -19,3 +19,4 @@
 .8: cm min, chk lp bx. pops lp/min com dem. wks wt bx conf/warning?
 .9: ad loc bx rep to gtdsk
 .10: ad fetch_head to sncexcl bt
+.11 ed r, com mn

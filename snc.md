@@ -11,3 +11,4 @@
 .1: tu_es arrives lp, try com lp vs. wks.
 .2: dh_es not arrived, maybe dh_tu+dh_es in 1 vs ws opened...
 .3: slv reb. wks.
+.4: rm gt* fr bx sncexc, bth

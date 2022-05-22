@@ -12,3 +12,5 @@
 .2: dh_es not arrived, maybe dh_tu+dh_es in 1 vs ws opened...
 .3: slv reb. wks.
 .4: rm gt* fr bx sncexc, bth
+.4: rm bx gt from lp, cl into loc, com mn, wks.
+.5: ed r, chk vs, com vs

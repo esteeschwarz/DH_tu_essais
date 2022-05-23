@@ -17,9 +17,10 @@ data_1 <- map(files, read_xml)
 library(purr)
 data_1 <- map(files, read_xml)
 # Namespace entfernen
+data_1[[2]] %>% xml_ns()
+data_1[[3]]%>% xml_ns_strip()
 
-data_1 %>% xml_find_all('//*') %>%
-data%>% xml_path()
+data_1 %>% xml_find_all('//*') %>% xml_path()
 data_1
 # Beispiel 1: xpath-Pfade anzeigen
 # Alle xpath-Pfade anzeigen

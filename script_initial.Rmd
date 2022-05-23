@@ -20,6 +20,11 @@ p:21/dh/es_dh/r/tut
 .9 in gh desk open rep in vs
 .10 change something e.g. this text
 .11 save > voila: aufforderung zum commit als lapsi.
+## log
+.12213:
+.1: ewa open GIT/DH_tu_essais/001.RProj
+.2: git pull
+.3: set wd sessions
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -43,3 +48,9 @@ init routines:
 ```{r}
 
 ```
+12213.xml essai
+```{r}
+library(xml2)
+dta<-read_xml("~/boxHKW/UNI/21S/DH/local/ada/ada_posts.xml")
+data<-dta
+````

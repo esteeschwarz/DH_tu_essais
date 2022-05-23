@@ -54,7 +54,7 @@ data %>%
 
 # Alle xpath-Pfade zu einem head-Element anzeigen
 all_heads <- data %>% 
-  xml_find_all('//head') %>%
+  xml_find_all('//category') %>%
   xml_path()
 all_heads
 all_heads[1]
@@ -66,7 +66,7 @@ all_heads[1]
 xml_text(all_heads[2])
 # So geht es
 all_chapters <- data %>% 
-  xml_find_all('//head') %>%
+  xml_find_all('//category') %>%
   xml_text()
 all_chapters
 

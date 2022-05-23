@@ -1,0 +1,25 @@
+---
+title: "Übungsaufgabe 3: Wiederholung und Einstieg in Git und GitHub"
+author: "R Tutorium - Lisa Poggel"
+date: "Zum 23.5.2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+1. Ladet git herunter: [**https://git-scm.com/downloads**](https://git-scm.com/downloads). Wenn ihr das noch nicht gemacht habt, erstellt einen Account auf [**https://github.com/**](https://github.com/).
+
+2. Folgt [**diesem Video-Tutorial**](https://www.youtube.com/watch?v=kL6L2MNqPHg) (ca. 15 min.) zur Verwendung von Git und GitHub im RStudio. Klappt etwas nicht? [**Hier**](https://cfss.uchicago.edu/setup/git-with-rstudio/) findet ihr einige Vorschläge zum Troubleshooting. Ihr könnt natürlich auch immer mich fragen. 
+
+3. In Aufgabe 2 habt ihr gleichzeitig ein neues Repository, ein Directory und ein RProject erstellt. Das sind viele neue Begriffe! Was ein Directory ist, wissen wir schon aus den letzten Stunden: Ein Directory ist ein lokales Verzeichnis auf eurem Computer, im Prinzip einfach ein Ordner mit ggf. Unterordnern, die dann Subdirectories heißen. Ein Repository ist letztlich nur ein [**verwaltetes Verzeichnis**](https://de.wikipedia.org/wiki/Repository), das in unserem Fall der Versionsverwaltung dient. Und was ist ein RProject? Lest euch [**diesen Beitrag**](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/) durch und beschreibt in euren eigenen Worten, was ein RProject ist. 
+4. Über das RStudio kann man nicht nur ein neues Repository erstellen, sondern auch Repositories aus GitHub "klonen", also als lokales verwaltetes Verzeichnis auf den eigenen Computer downloaden. [**Hier**](https://resources.github.com/github-and-rstudio/) findet ihr eine Anleitung.  Wenn man Zugangsrechte hat, kann man dann lokal Änderungen vornehmen und diese wieder auf GitHub "pushen", also hochladen. Wenn mehrere Entwickler:innen an einem Projekt arbeiten, kann es so natürlich sein, dass jemand in unserer Abwesenheit eine Änderung vorgenommen hat, und somit die Version auf GitHub unserer lokalen Version eine Änderung voraus ist. Wenn wir lokal weiterarbeiten wollen, müssen wir diese Änderungen zuerst mit unserer lokalen Version synchronisieren. Dieser Vorgang wird "pull" genannt. </br> Wir wollen jetzt diesen Workflow mal ausprobieren. Klont das Repository "r-tutorium" von meiner GitHub-Seite und nutzt öffnet die Datei ``tutorium5_230522_uebung.R``. Bearbeitet eine der beiden Übungsaufgaben und "pusht" zuletzt eure Änderungen in das GitHub repository. 
+
+
+
+
+
+

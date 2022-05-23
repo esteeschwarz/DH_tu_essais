@@ -20,8 +20,11 @@ typeof(data)
 data
 # Mehrere Dateien einlesen: brauchen wir jetzt nicht
 files <- list.files(pattern = "\\.xml",path = "data",include.dirs = T,full.names = T) # alternativ: path = "" als weiteres Argument der list.files Funktion
+
 xml_corpus <- map(files, read_xml)
 typeof(xml_corpus)
+
+files<-list.files(pattern="*lessing*",path = "sessions/data",include.dirs = T,full.names = T)
 # Oder: Funktion lapply
 # Wie kann man das als Schleife umschreiben? 
 lst <- list("")
@@ -54,7 +57,7 @@ data %>%
 
 # Alle xpath-Pfade zu einem head-Element anzeigen
 all_heads <- data %>% 
-  xml_find_all('//head') %>%
+  xml_find_all('//category') %>%
   xml_path()
 all_heads
 all_heads[1]
@@ -66,7 +69,7 @@ all_heads[1]
 xml_text(all_heads[2])
 # So geht es
 all_chapters <- data %>% 
-  xml_find_all('//head') %>%
+  xml_find_all('//category') %>%
   xml_text()
 all_chapters
 

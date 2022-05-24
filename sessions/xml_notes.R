@@ -53,7 +53,6 @@ cats<-unique(all_cats)
 #find pdf links
 grepl("*pdf",all_cn)
 all_cn[97]
-srcp<-("<a href=\"https://userblogs.fu-berlin.de/laxonchammes/files/2020/03/10122.portfolioFIXc-1.pdf\">")
 #now regex
 regexpr("(http.*\\.pdf)",all_cn)
 grep("a href=.*pdf",all_cn,value = T)

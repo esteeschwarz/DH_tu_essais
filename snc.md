@@ -21,4 +21,4 @@
 .10: ad fetch_head to sncexcl bt
 .11 ed r, com mn. wks.
 1216:
-.: self switch in vs from r-t to tu_es? no. stays at mstr
+.: self switch in vs from r-t to tu_es? no. stays at mstr. viewthing...

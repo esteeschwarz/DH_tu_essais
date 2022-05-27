@@ -62,3 +62,14 @@ head(all_pdf)
 str_extract(all_pdf,"(http.*\\.pdf$)")
 ###
 src
+# zz<-textConnection("output.txt","w")
+# sink(zz)
+# example(lm)
+# sink()
+# close(zz)
+# cat(output.txt,sep = "\n")
+# output.txt
+#no.
+close
+stdout()
+close("all")

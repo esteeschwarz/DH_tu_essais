@@ -11,7 +11,7 @@ corpusname<-"ger"
 base_url<-"https://dracor.org/api"
 full_url<-paste(base_url,"corpora",corpusname,sep="/")
 api_call<-httr::GET(full_url)
-#httr::content(api_call,"text")
+httr::content(api_call,"text")
 api_df<-fromJSON(content(api_call,"text"),simplifyDataFrame = T)
 plays<-api_df$dramas
 #################
@@ -21,7 +21,7 @@ plays<-api_df$dramas
 
 #extract play GETs:
 #all buechner plays:
-seek<-"wagner"
+seek<-"buechner"
 grep1<-grep(seek,plays$name)
 #grep1
 get.url<-plays$name[grep1]
@@ -30,3 +30,5 @@ tei_url_full<-paste(plays_url,map_chr(get.url,paste),"tei",sep="/")
 corpus3<-map(tei_url_full,read_xml)
 #wks.
 #####
+tei_url_full
+c1<-read_xml(tei_url_full[1])

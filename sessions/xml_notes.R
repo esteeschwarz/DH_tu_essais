@@ -73,3 +73,6 @@ src
 close
 stdout()
 close("all")
+library(callr)
+getwd()
+rscript("dracor_tei_call.R")

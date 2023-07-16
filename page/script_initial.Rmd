@@ -2,7 +2,7 @@
 title: "initial"
 author: "st."
 date: '2022-05-15'
-output: github_document
+output: html_document
 #output_dir: page
 ---
 
